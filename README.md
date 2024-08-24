@@ -21,7 +21,7 @@ Installation and Setup
 
 	1.	Clone the repository:
 
-git clone https://github.com/priyansu12345/TESTUTILS
+git clone https://github.com/priyansu12345/TextUtils
 
 
 	2.	Navigate to the project directory:
