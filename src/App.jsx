@@ -4,6 +4,7 @@ import Forms from "./components/Forms";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import About from "./components/About";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 
@@ -30,6 +31,7 @@ export default function App() {
   };
 
 
+  const [alert,setalert]=useState(false);
   const [dark, setDark] = useState(false);
   const [mode, setMode] = useState(loadMode);
   const [btnng, setBg] = useState({
@@ -75,7 +77,7 @@ export default function App() {
       path: "/",
       element: (
         <>
-          <Navbar title="TextUtils" Mode={mode} toggle={toggle} geeetref={getref} reef={myref}/>
+          <Navbar title="TextUtils" Mode={mode} toggle={toggle} />
           <Forms
             style={{
               margin: "30px",
@@ -93,7 +95,8 @@ export default function App() {
       element: (
         <>
           <Navbar title="TextUtils" Mode={mode} toggle={toggle} />
-          <Contact Mode={mode} />
+         
+          <Contact Mode={mode} setalert={setalert}  alert={alert}/>
           <Footer Mode={mode} className="my-3" />
         </>
       ),
